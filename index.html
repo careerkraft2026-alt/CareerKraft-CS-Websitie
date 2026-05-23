@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="CareerKraft - AI-powered training platform preparing graduates from small towns for India's NBFC and financial services sector. Empowering Graduates. Supporting Recruiters.">
+  <title>CareerKraft | Building India’s Next-Gen NBFC Workforce</title>
+  <!-- Google Fonts + Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fefefe;
+      color: #1A2C3E;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* Typography */
+    h1, h2, h3 {
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+    }
+
+    h2 {
+      font-size: 2.25rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-sm {
+      padding: 60px 0;
+    }
+
+    .bg-white {
+      background-color: #ffffff;
+    }
+
+    .bg-soft {
+      background-color: #F8FAFE;
+    }
+
+    .bg-primary-light {
+      background: linear-gradient(135deg, #0F2B3D 0%, #1A4A6F 100%);
+      color: white;
+    }
+
+    /* buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.25s ease;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: #0066CC;
+      color: white;
+      box-shadow: 0 4px 8px rgba(0,102,204,0.2);
+    }
+
+    .btn-primary:hover {
+      background: #004c99;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,102,204,0.25);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #0066CC;
+      color: #0066CC;
+    }
+
+    .btn-outline:hover {
+      background: #0066CC;
+      color: white;
+      border-color: #0066CC;
+    }
+
+    .btn-light-outline {
+      border: 2px solid white;
+      color: white;
+      background: transparent;
+    }
+
+    .btn-light-outline:hover {
+      background: white;
+      color: #1A4A6F;
+    }
+
+    /* header */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      flex-wrap: wrap;
+    }
+
+    .logo h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0;
+      letter-spacing: -0.02em;
+    }
+
+    .logo span {
+      font-weight: 800;
+      background: linear-gradient(135deg, #0066CC, #00A2FF);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: #1A2C3E;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #0066CC;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 60px 0 40px 0;
+    }
+
+    .hero-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .hero-content {
+      flex: 1.2;
+    }
+
+    .hero-badge {
+      background: rgba(0,102,204,0.1);
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #0066CC;
+      margin-bottom: 1rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 28px;
+      margin-top: 32px;
+    }
+
+    /* skill cards */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 28px;
+      margin-top: 48px;
+    }
+
+    .skill-card {
+      background: white;
+      padding: 24px 20px;
+      border-radius: 28px;
+      text-align: center;
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+      transition: all 0.2s ease;
+      border: 1px solid #eef2f8;
+    }
+
+    .skill-card i {
+      font-size: 2.4rem;
+      color: #0066CC;
+      margin-bottom: 16px;
+    }
+
+    .skill-card h4 {
+      font-weight: 700;
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+    }
+
+    .skill-card p {
+      font-size: 0.9rem;
+      color: #4a5b6e;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-6px);
+      border-color: #cce4ff;
+      box-shadow: 0 20px 30px -12px rgba(0,102,204,0.12);
+    }
+
+    /* two column cards */
+    .two-col {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .card-offer {
+      flex: 1;
+      background: #ffffff;
+      border-radius: 32px;
+      padding: 32px 28px;
+      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.08);
+      transition: all 0.2s;
+      border: 1px solid #eef2fa;
+    }
+
+    .card-offer h3 {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .card-offer i {
+      font-size: 2rem;
+      color: #0066CC;
+    }
+
+    .card-offer ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .card-offer li {
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 500;
+    }
+
+    .card-offer li i {
+      font-size: 1.2rem;
+      color: #00A86B;
+      width: 24px;
+    }
+
+    /* Vision block */
+    .vision-block {
+      background: linear-gradient(115deg, #EFF6FF 0%, #FFFFFF 100%);
+      border-radius: 48px;
+      padding: 48px 48px;
+      text-align: center;
+      margin-top: 30px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+    }
+
+    .coming-soon {
+      background: #1F2F40;
+      color: white;
+      border-radius: 40px;
+      padding: 48px 40px;
+      text-align: center;
+    }
+
+    .contact-flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+      align-items: center;
+      background: #FFFFFF;
+      border-radius: 40px;
+      padding: 48px 40px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+      border: 1px solid #eef2f8;
+    }
+
+    .contact-info i {
+      font-size: 1.8rem;
+      color: #0066CC;
+      margin-right: 12px;
+      vertical-align: middle;
+    }
+
+    .contact-info p {
+      margin: 16px 0;
+      font-size: 1.1rem;
+    }
+
+    .footer {
+      background: #0C1B2A;
+      color: #cbd5e1;
+      padding: 40px 0;
+      text-align: center;
+      border-top: 1px solid #1e2f3e;
+    }
+
+    .footer a {
+      color: #94a3b8;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 24px;
+      }
+      h1 {
+        font-size: 2.3rem;
+      }
+      h2 {
+        font-size: 1.8rem;
+      }
+      .navbar {
+        flex-direction: column;
+        gap: 18px;
+      }
+      .nav-links {
+        gap: 24px;
+      }
+      .section {
+        padding: 60px 0;
+      }
+      .hero-grid {
+        flex-direction: column;
+      }
+      .vision-block {
+        padding: 32px 24px;
+      }
+      .contact-flex {
+        flex-direction: column;
+        text-align: center;
+      }
+      .card-offer {
+        padding: 24px 20px;
+      }
+    }
+
+    .ai-tag {
+      background: #E9F4FF;
+      color: #0052a3;
+      font-weight: 600;
+      border-radius: 100px;
+      display: inline-block;
+      padding: 6px 18px;
+      font-size: 0.8rem;
+    }
+
+    .stat-item {
+      text-align: left;
+    }
+    .stat-number {
+      font-weight: 800;
+      font-size: 2rem;
+      color: #0066CC;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header / Navigation -->
+<header style="border-bottom: 1px solid rgba(0,0,0,0.05); background: white;">
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <h1><span>CareerKraft</span></h1>
+        <p style="font-size: 0.75rem; letter-spacing: 0.3px; color:#4b6b8f;">crafting careers · creating opportunities</p>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Program</a></li>
+        <li><a href="#audience">For You</a></li>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#contact">Connect</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section id="home" class="hero section">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fas fa-brain" style="margin-right: 6px;"></i> AI-Powered Training Platform
+          </div>
+          <h1>Building India’s Next-Generation <span style="color:#0066CC;">NBFC Workforce</span></h1>
+          <p style="font-size: 1.2rem; color: #334E68; margin-bottom: 1.5rem;">Bridging the gap between education and employment by creating industry-ready talent for leading NBFCs across India.</p>
+          <p style="margin-bottom: 2rem;">Empowering ambitious graduates from small towns & local colleges to thrive in financial services — with AI-driven learning, real-world skills, and placement readiness.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 16px;">
+            <a href="#contact" class="btn btn-primary"><i class="fas fa-graduation-cap"></i> For Students</a>
+            <a href="#audience" class="btn btn-outline"><i class="fas fa-handshake"></i> For Recruiters</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-item"><div class="stat-number">Tier 2/3</div><div>Focus cities</div></div>
+            <div class="stat-item"><div class="stat-number">100%</div><div>Industry-aligned</div></div>
+            <div class="stat-item"><div class="stat-number">AI +</div><div>Smart assessments</div></div>
+          </div>
+        </div>
+        <div style="flex:0.8; background: linear-gradient(145deg, #EFF6FF, white); border-radius: 48px; padding: 24px; text-align: center;">
+          <i class="fas fa-chalkboard-user" style="font-size: 4rem; color: #0066CC; margin-bottom: 20px; display: inline-block;"></i>
+          <h3 style="font-size: 1.5rem;">job-ready in 12 weeks</h3>
+          <p>Communication · Sales · Digital fluency · NBFC domain expertise</p>
+          <div class="ai-tag" style="margin-top: 20px;"><i class="fas fa-microchip"></i> AI-driven learning modules & real-time assessments</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Competencies Section -->
+  <section id="skills" class="bg-soft section">
+    <div class="container">
+      <div style="text-align: center; max-width: 700px; margin: 0 auto 40px;">
+        <span class="ai-tag"><i class="fas fa-chart-line"></i> industry-ready curriculum</span>
+        <h2 style="margin-top: 20px;">What graduates master at CareerKraft</h2>
+        <p>Practical, modern skills designed for NBFC & financial services roles — from customer handling to compliance awareness.</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card"><i class="fas fa-comments"></i><h4>Communication & Customer handling</h4><p>Empathy, active listening, and client engagement for real-world scenarios.</p></div>
+        <div class="skill-card"><i class="fas fa-chart-simple"></i><h4>Sales & Financial knowledge</h4><p>Loan products, cross-selling, and basic financial literacy.</p></div>
+        <div class="skill-card"><i class="fas fa-laptop-code"></i><h4>Digital & Workplace readiness</h4><p>CRM tools, digital onboarding, remote collaboration essentials.</p></div>
+        <div class="skill-card"><i class="fas fa-bullhorn"></i><h4>Interview & Job preparedness</h4><p>Mock interviews, resume building, and aptitude mastery.</p></div>
+        <div class="skill-card"><i class="fas fa-building"></i><h4>NBFC Industry understanding</h4><p>Regulatory basics, risk management, and customer lifecycle.</p></div>
+      </div>
+      <div style="background: white; border-radius: 32px; margin-top: 48px; padding: 28px 32px; text-align: center; box-shadow: 0 8px 20px rgba(0,0,0,0.02);">
+        <i class="fas fa-robot" style="font-size: 2rem; color:#0066CC;"></i>
+        <p style="font-weight: 500; margin-top: 8px;">Using <strong>AI-driven learning modules and smart assessments</strong>, we personalise job readiness and help candidates become confident, industry-ready professionals.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dual Audience: For Students & Colleges / NBFCs & Recruiters -->
+  <section id="audience" class="section bg-white">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 24px;">
+        <h2>Built for Colleges & NBFCs</h2>
+        <p style="font-size: 1.1rem; max-width: 700px; margin: 0 auto;">CareerKraft creates a win-win ecosystem: students get careers, employers get trained talent.</p>
+      </div>
+      <div class="two-col">
+        <!-- Students & Colleges Card -->
+        <div class="card-offer">
+          <h3><i class="fas fa-graduation-cap"></i> For Students & Colleges</h3>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Career-oriented training programs</li>
+            <li><i class="fas fa-check-circle"></i> Skill development aligned with industry needs</li>
+            <li><i class="fas fa-check-circle"></i> Placement readiness support</li>
+            <li><i class="fas fa-check-circle"></i> Accessible learning for regional talent</li>
+            <li><i class="fas fa-check-circle"></i> Local language support & AI mentorship</li>
+          </ul>
+          <div style="margin-top: 28px;"><a href="#contact" class="btn btn-outline" style="width: 100%; text-align: center;">Partner with us <i class="fas fa-arrow-right"></i></a></div>
+        </div>
+        <!-- NBFCs & Recruiters Card -->
+        <div class="card-offer">
+          <h3><i class="fas fa-chart-line"></i> For NBFCs & Recruiters</h3>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Access to trained entry-level workforce</li>
+            <li><i class="fas fa-check-circle"></i> Better hiring readiness from smaller towns</li>
+            <li><i class="fas fa-check-circle"></i> Scalable talent pipeline creation</li>
+            <li><i class="fas fa-check-circle"></i> Reduced onboarding & training effort</li>
+            <li><i class="fas fa-check-circle"></i> AI-verified skill certifications</li>
+          </ul>
+          <div style="margin-top: 28px;"><a href="#contact" class="btn btn-primary" style="width: 100%; text-align: center;">Hire trained graduates <i class="fas fa-briefcase"></i></a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Vision + Tagline -->
+  <section id="vision" class="section bg-soft">
+    <div class="container">
+      <div class="vision-block">
+        <i class="fas fa-eye" style="font-size: 2.5rem; color: #0066CC; margin-bottom: 16px;"></i>
+        <h2>Our Vision</h2>
+        <p style="font-size: 1.2rem; max-width: 800px; margin: 20px auto 0; color:#1F2F40;">To become India’s trusted career-building platform connecting ambitious graduates from local colleges with opportunities at leading NBFCs and financial institutions.</p>
+        <div style="margin-top: 28px;">
+          <span style="background: #FFFFFFCC; padding: 8px 16px; border-radius: 40px; font-weight: 600;">✨ Empowering Graduates. Supporting Recruiters. ✨</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coming Soon + Early Partners -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="coming-soon">
+        <i class="fas fa-clock" style="font-size: 2.8rem; margin-bottom: 16px; opacity: 0.9;"></i>
+        <h2 style="color: white;">Coming Soon</h2>
+        <p style="font-size: 1.2rem; margin: 12px 0 20px; max-width: 600px; margin-left: auto; margin-right: auto;">We are currently building the platform and onboarding early partners.</p>
+        <div style="background: rgba(255,255,255,0.15); border-radius: 60px; padding: 4px 20px; display: inline-block;">
+          <i class="fas fa-rocket"></i> Launching across 25+ cities
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Connect / Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="contact-flex">
+        <div>
+          <h3 style="font-size: 1.8rem;">Let's build the future of NBFC talent</h3>
+          <p style="margin: 16px 0; color: #2c3e50;">For partnerships, hiring collaborations, or early access — reach out to our team.</p>
+          <div class="contact-info">
+            <p><i class="fas fa-envelope"></i> <a href="mailto:info@CareerKraft.in" style="color:#0066CC; text-decoration: none;">info@CareerKraft.in</a></p>
+            <p><i class="fas fa-globe"></i> <a href="http://www.CareerKraft.in" target="_blank" style="color:#0066CC; text-decoration: none;">www.CareerKraft.in</a></p>
+            <p><i class="fas fa-map-marker-alt"></i> India · serving Tier 2 & Tier 3 cities</p>
+          </div>
+          <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 24px;">
+            <a href="mailto:info@CareerKraft.in?subject=Partnership%20Inquiry" class="btn btn-primary"><i class="fas fa-handshake"></i> Partner with us</a>
+            <a href="mailto:info@CareerKraft.in?subject=Early%20Access" class="btn btn-outline"><i class="fas fa-bell"></i> Request early access</a>
+          </div>
+        </div>
+        <div style="background: #F0F7FF; border-radius: 32px; padding: 24px; text-align: center; min-width: 200px;">
+          <i class="fas fa-users" style="font-size: 3rem; color: #0066CC;"></i>
+          <p style="font-weight: 600; margin-top: 12px;">Join the talent revolution</p>
+          <small>Bridging India's skills-to-employment divide</small>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+      <p style="font-weight: 600; letter-spacing: 0.5px;">CareerKraft — Crafting Careers. Creating Opportunities.</p>
+      <p>© 2025 CareerKraft | AI-powered NBFC workforce development platform</p>
+      <p style="font-size: 0.85rem;"><i class="fas fa-map-pin"></i> Empowering graduates from small towns & local colleges</p>
+      <div style="margin-top: 8px;">
+        <a href="#home" style="color:#9eb4d0; margin: 0 8px;">Home</a> • 
+        <a href="#skills" style="color:#9eb4d0; margin: 0 8px;">Program</a> • 
+        <a href="#audience" style="color:#9eb4d0; margin: 0 8px;">For Recruiters</a> • 
+        <a href="#contact" style="color:#9eb4d0; margin: 0 8px;">Contact</a>
+      </div>
+      <div><i class="fas fa-code"></i> building India’s next-gen NBFC workforce</div>
+    </div>
+  </div>
+</footer>
+
+<!-- simple smooth anchor scroll -->
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href === "#" || href === "") return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
